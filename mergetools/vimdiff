@@ -364,6 +364,12 @@ diff_cmd () {
 }
 
 
+diff_cmd_help() {
+	echo "Run 'man git-difftool--vimdiff' for details"
+	return 0
+}
+
+
 merge_cmd () {
 	layout=$(git config mergetool.$merge_tool.layout)
 
@@ -432,6 +438,12 @@ merge_cmd () {
 	fi
 
 	return "$ret"
+}
+
+
+merge_cmd_help() {
+	echo "Run 'man git-mergetool--vimdiff' for details"
+	return 0
 }
 
 
